@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 void radom(int** a){
     int c,d,num;
     do{
-        srand((unsigned int)time(NULL));
         c=rand()%4;
         d=rand()%4;
     } while (a[c][d]!=0);
@@ -244,7 +242,7 @@ int show(int** a){
         printf("\n");
     }
     if(flag){
-        printf("ÓÎÏ·Ê¤Àû£¡");
+        printf("æ¸¸æˆèƒœåˆ©ï¼");
     }
     return sum;
 }
@@ -259,7 +257,7 @@ int main(){
     radom(a);
     show(a);
     do{
-        printf("Ïò×ó°´ 1 £¬ÏòÓÒ°´ 2 £¬ÏòÉÏ°´ 3 £¬ÏòÏÂ°´ 4 £¬ÍË³ö°´ 0\n");
+        printf("å‘å·¦æŒ‰ 1 ï¼Œå‘å³æŒ‰ 2 ï¼Œå‘ä¸ŠæŒ‰ 3 ï¼Œå‘ä¸‹æŒ‰ 4 ï¼Œé€€å‡ºæŒ‰ 0\n");
         scanf("%d",&x);
         if(x==1){
             left(a);
@@ -278,7 +276,7 @@ int main(){
             radom(a);
             sum=show(a);
             if(!sum){
-                printf("Ã»ÓĞ¿ÉÒÆ¶¯µÄ·½¿é£¬ÓÎÏ·½áÊø");
+                printf("æ²¡æœ‰å¯ç§»åŠ¨çš„æ–¹å—ï¼Œæ¸¸æˆç»“æŸ");
                 x=0;
             }
         }
